@@ -1,0 +1,94 @@
+﻿<Window x:Class="GIS_ECP_Monitor.HelpDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GIS_ECP_Monitor"
+        mc:Ignorable="d"
+        Title="Справка" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow" Height="580" Width="600">
+    <Grid Margin="10">
+        <Grid.Resources>
+
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+           TextWrapping="Wrap"
+           FontWeight="Bold"
+           FontSize="15"
+           Margin="0,0,0,10">
+    Справка по работе с программой ГИС ЕЦП Монитор
+        </TextBlock>
+
+        <TextBlock Grid.Row="1"
+           TextWrapping="Wrap"
+           Margin="0,0,0,10"
+           FontSize="14"
+           LineHeight="18">
+
+        <!-- Описание -->
+        <Run Text="Программа предназначена для мониторинга папки с запросами, скачанными из ГИС ЕЦП, и контроля наличия новых файлов, подлежащих печати."/>
+    
+        <LineBreak/><LineBreak/>
+
+        <Run Text="Проверка выполняется ежедневно с понедельника по пятницу."/>
+        <LineBreak/>
+        <Run Text="Запросы за выходные и праздничные дни не учитываются."/>
+    
+        <LineBreak/><LineBreak/>
+
+        <Run Text="При первом запуске необходимо выбрать корневую папку с запросами и задать даты праздничных дней."/>
+    
+        <LineBreak/><LineBreak/>
+
+        <!-- Элементы управления -->
+        <Run Text="Элементы управления:" FontWeight="Bold"/>
+        <LineBreak/>
+        <InlineUIContainer BaselineAlignment="Center">
+            <Image Source="Icons/Green.ico" Width="16" Height="16"/>
+        </InlineUIContainer>
+        <Run Text=" Иконка в системном трее означает, что запросы за предыдущий рабочий день найдены."/>
+        <LineBreak/>
+        <Run Text="Двойной клик открывает файл с запросами для печати."/>
+
+        <LineBreak/><LineBreak/>
+
+        <InlineUIContainer BaselineAlignment="Center">
+            <Image Source="Icons/Red.ico" Width="16" Height="16"/>
+        </InlineUIContainer>
+        <Run Text=" Иконка в системном трее означает, что запросы за предыдущий рабочий день отсутствуют."/>
+        <LineBreak/>
+        <Run Text="Двойной клик открывает папку с запросами."/>
+
+        <LineBreak/><LineBreak/>
+
+        <!-- Контекстное меню -->
+        <Run Text="Контекстное меню (правая кнопка мыши по иконке приложения):" FontWeight="Bold"/>
+        <LineBreak/>
+
+        <Run Text="• Автозапуск — запуск программы при входе в систему."/>
+        <LineBreak/>
+        <Run Text="• Выбрать папку с запросами — указание рабочей директории."/>
+        <LineBreak/>
+        <Run Text="• Задать даты праздников — исключение дней из проверки."/>
+        <LineBreak/>
+        <Run Text="• Открыть папку с запросами — быстрый доступ к директории."/>
+
+        </TextBlock>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="OK" Width="75" Margin="0,10,0,0" Click="Ok_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
