@@ -58,7 +58,7 @@
 ## 📦 Установка
 
 1. Скачайте установщик из раздела **Releases**
-2. Запустите `Setup.exe`
+2. Запустите `GIS_ECP_Monitor_Setup.exe`
 3. Следуйте инструкциям установщика
 
 ---
@@ -85,6 +85,12 @@
 - WPF
 - Microsoft.NETCore.Platforms
 - Microsoft Windows API Code Pack (Core, Shell)
+
+---
+
+## ❤ Поддержать проект
+
+Вы можете поддержать проект, сделав пожертвование через [yoomoney.ru](https://yoomoney.ru/to/4100119570633859).
 
 ---
 
