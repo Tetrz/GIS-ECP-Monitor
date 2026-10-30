@@ -1,10 +1,10 @@
-# GIS ECP Monitor
+# ГИС ЕЦП Монитор
 [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-Framework-blueviolet.svg)]()
 
-Утилита для мониторинга папки с запросами, загруженными из ГИС ЕЦП, и контроля наличия файлов, подлежащих печати.
+Утилита для мониторинга папки с запросами, загруженными из ГИС ЕЦП c помощью программы **[ГИС ЕЦП Экспорт](https://github.com/Tetrz/GIS-ECP-Export)**, и контроля наличия файлов, подлежащих печати.
 
 [![Download](https://img.shields.io/badge/Скачать-установщик-blue?style=for-the-badge&logo=windows)](https://github.com/Tetrz/GIS-ECP-Monitor/releases/latest)
 
@@ -74,8 +74,8 @@
 
 ## 📋 Требования
 
-- Windows 7 / 10 / 11  
-- .NET Framework 4.7.2 и выше  
+- Windows 10 / 11  
+- .NET Framework 4.7.1 и выше  
 
 ---
 

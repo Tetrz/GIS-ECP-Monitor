@@ -7,11 +7,11 @@ using System.Windows;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("GIS_ECP_Folder_Watcher")]
+[assembly: AssemblyTitle("ГИС ЕЦП Монитор")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GIS_ECP_Folder_Watcher")]
+[assembly: AssemblyCompany("Аршинов Алексей")]
+[assembly: AssemblyProduct("ГИС ЕЦП Монитор")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

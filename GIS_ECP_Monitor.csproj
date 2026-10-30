@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -110,6 +110,7 @@
     <Compile Include="HolidaySetDialog.xaml.cs">
       <DependentUpon>HolidaySetDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HyperlinkHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -172,4 +173,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--
+    Записывает версию публикации из свойств проекта (ApplicationVersion/ApplicationRevision)
+    в AssemblyInformationalVersion, чтобы её можно было показать в окне "О программе".
+  -->
+  <Target Name="GenerateAppVersionInfo" BeforeTargets="BeforeCompile" Condition="'$(ApplicationVersion)' != ''" Inputs="$(MSBuildProjectFullPath)" Outputs="$(IntermediateOutputPath)AppVersionInfo.g.cs">
+    <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
+      <Output TaskParameter="OutputVersion" PropertyName="_AppInformationalVersion" />
+    </FormatVersion>
+    <ItemGroup>
+      <_AppVersionAttribute Include="System.Reflection.AssemblyInformationalVersionAttribute">
+        <_Parameter1>$(_AppInformationalVersion)</_Parameter1>
+      </_AppVersionAttribute>
+    </ItemGroup>
+    <WriteCodeFragment AssemblyAttributes="@(_AppVersionAttribute)" Language="C#" OutputFile="$(IntermediateOutputPath)AppVersionInfo.g.cs">
+      <Output TaskParameter="OutputFile" ItemName="Compile" />
+      <Output TaskParameter="OutputFile" ItemName="FileWrites" />
+    </WriteCodeFragment>
+  </Target>
 </Project>

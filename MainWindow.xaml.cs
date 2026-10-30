@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Threading;
-using Forms = System.Windows.Forms;
+using Forms = System.Windows.Forms; 
 
 namespace GIS_ECP_Monitor
 {
@@ -85,6 +85,7 @@ namespace GIS_ECP_Monitor
             menu.Items.Add("-");
             menu.Items.Add("Справка", null, OpenHelpDialog);
             menu.Items.Add("О программе", null, OpenAboutDialog);
+            menu.Items.Add("❤ Поддержать проект", null, OpenSupportLink);
             menu.Items.Add("-");
             menu.Items.Add("Выход", null, Exit_Click);
 
@@ -372,6 +373,16 @@ namespace GIS_ECP_Monitor
             var dialog = new AboutDialog();
 
             dialog.ShowDialog();
+        }
+
+        // Поддержать проект.
+        private static void OpenSupportLink(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/Tetrz/GIS-ECP-Monitor#❤️-Поддержать-проект",
+                UseShellExecute = true
+            });
         }
 
         // Выход из приложения.

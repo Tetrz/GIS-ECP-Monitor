@@ -1,5 +1,4 @@
-﻿using GIS_ECP_Monitor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace GIS_ECP_Folder_Watcher
+namespace GIS_ECP_Monitor
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

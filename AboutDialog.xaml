@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GIS_ECP_Monitor"
         mc:Ignorable="d"
         Title="О программе" 
-        Height="600" Width="500"
+        Height="640" Width="500"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="SingleBorderWindow">
@@ -19,63 +19,72 @@
 
         <TextBlock TextWrapping="Wrap" FontSize="14">
 
-        <Run Text="ГИС ЕЦП Монитор" FontWeight="Bold"/>
-        <LineBreak/>
-        <Run Text="Версия 1.0.1"/>
+            <Run Text="ГИС ЕЦП Монитор" FontWeight="Bold"/>
+            <Run Text="версия"/>
+            <Run Text="{x:Static local:AppInfo.Version}"/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="Программа предназначена для мониторинга папки с запросами,"/>
-        <LineBreak/>
-        <Run Text="загруженными из ГИС ЕЦП, и контроля наличия файлов,"/>
-        <LineBreak/>
-        <Run Text="подлежащих последующей печати."/>
+            <Run Text="Программа предназначена для мониторинга папки с запросами,"/>
+            <LineBreak/>
+            <Run Text="загруженными из ГИС ЕЦП, и контроля наличия файлов,"/>
+            <LineBreak/>
+            <Run Text="подлежащих последующей печати."/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
+        
+            <TextBlock Margin="0,10,0,0">
+                <Run Text="Страница проекта на GitHub: " FontWeight="Bold"/>
+                <Hyperlink NavigateUri="https://github.com/Tetrz/GIS-ECP-Monitor"
+                           RequestNavigate="Hyperlink_RequestNavigate">
+                            перейти
+                </Hyperlink>
+            </TextBlock>
 
-        <Run Text="Разработчик: " FontWeight="Bold"/>
-        <Run Text="Аршинов Алексей"/>
-        <LineBreak/>
-        <Run Text="Email: " FontWeight="Bold"/>
-        <Run Text="lexgroup707@gmail.com"/>
+            <LineBreak/>
+            <Run Text="Разработчик: " FontWeight="Bold"/>
+            <Run Text="Аршинов Алексей"/>
+            <LineBreak/>
+            <Run Text="Email: " FontWeight="Bold"/>
+            <Run Text="lexgroup707@gmail.com"/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="Лицензия:" FontWeight="Bold"/>
-        <LineBreak/>
-        <Run Text="Данное программное обеспечение распространяется на условиях лицензии MIT."/>
+            <Run Text="Лицензия:" FontWeight="Bold"/>
+            <LineBreak/>
+            <Run Text="Данное программное обеспечение распространяется на условиях лицензии MIT."/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="Разрешается свободное использование, копирование, изменение и распространение программы при условии сохранения уведомления об авторских правах."/>
+            <Run Text="Разрешается свободное использование, копирование, изменение и распространение программы при условии сохранения уведомления об авторских правах."/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="Программа предоставляется «как есть», без каких-либо гарантий."/>
-        <LineBreak/>
-        <Run Text="Автор не несёт ответственности за возможные последствия использования."/>
+            <Run Text="Программа предоставляется «как есть», без каких-либо гарантий."/>
+            <LineBreak/>
+            <Run Text="Автор не несёт ответственности за возможные последствия использования."/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="В программе используются компоненты третьих сторон:"/>
-        <LineBreak/>
-        <Run Text=".NET Framework, Microsoft.NETCore.Platforms, Microsoft Windows API Code Pack (Core, Shell)"/>
+            <Run Text="В программе используются компоненты третьих сторон:" FontWeight="Bold"/>
+            <LineBreak/>
+            <Run Text=".NET Framework, Microsoft.NETCore.Platforms, Microsoft Windows API Code Pack (Core, Shell)"/>
 
-        <LineBreak/>
-        <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
 
-        <Run Text="© 2026 Аршинов Алексей"/>
+            <Run Text="© 2026 Аршинов Алексей"/>
 
         </TextBlock>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="OK" Width="75" Margin="0,10,0,0" Click="Ok_Click"/>
+            <Button Content="OK" FontSize="14" Width="75" Margin="0,10,0,0" Click="Ok_Click"/>
         </StackPanel>
     </Grid>
 </Window>
